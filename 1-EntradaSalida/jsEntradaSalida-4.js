@@ -4,6 +4,9 @@
 */
 function mostrar()
 {
-	
+	var dato
+	dato=prompt("Escriba el dato")
+	alert=
+	//hacer hasta el ejercicio 6
 }
 
