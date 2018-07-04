@@ -4,9 +4,8 @@
 */
 function mostrar()
 {
-	var dato
-	dato=prompt("Escriba el dato")
-	alert=
+	var dato=prompt ("Ingrese su nombre");
+	document.getElementById("elNombre").value=dato;
 	//hacer hasta el ejercicio 6
 }
 
