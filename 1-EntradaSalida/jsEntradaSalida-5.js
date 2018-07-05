@@ -4,8 +4,9 @@ function mostrar()
 {	
     var nombre;
     var edad;
-    edad=document.getElementById("laEdad");
-    nombre=document.getElementById("elNombre");
-    alert("Usted se llama "+ document.getElementById("elNombre").value +" y tiene "+ document.getElementById("laEdad").value +" años.");
+    edad=document.getElementById("laEdad").value;
+    nombre=document.getElementById("elNombre").value;
+    alert("Usted se llama "+ nombre +" y tiene "+ edad +" años.");
 }
 
+// + es para "concatenar"
