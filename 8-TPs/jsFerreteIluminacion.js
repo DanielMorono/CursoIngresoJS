@@ -10,5 +10,52 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var cantidad;
+    var precioLampara = 35;
+    var resultado;
+    var marca;
+    marca = document.getElementById("Marca").value;
+    cantidad = document.getElementById("Cantidad").value;
+    resultado = cantidad * precioLampara;
+    cantidad=parseInt(cantidad);
+    var iibb = (resultado *10) / 100;
+    var precioDescuento = document.getElementById("precioDescuento").value;
+
+    if (cantidad >= 6) {
+        document.getElementById("precioDescuento").value = resultado- (resultado*50)/100;
+    }
+    else {
+        if (cantidad == 5 && (marca == "ArgentinaLuz")) {
+        document.getElementById("precioDescuento").value = resultado - (resultado * 40) / 100;} 
+        else {
+            if (cantidad == 5 && (marca != "ArgentinaLuz")) {
+               document.getElementById("precioDescuento").value = resultado - (resultado *30) /100; }
+            else {
+                    if (cantidad == 4 && (marca == "FelipeLamparas" || marca == "ArgentinaLuz")) {
+                    document.getElementById("precioDescuento").value = resultado - (resultado * 25) / 100;}   
+                    else {
+                        if (cantidad == 4 && (marca != "FelipeLamparas"|| marca != "ArgentinaLuz")) {
+                            document.getElementById("precioDescuento").value = resultado - (resultado * 20) / 100;}
+                        else {
+                            if (cantidad == 3 && (marca ="ArgentinaLuz")) {
+                                document.getElementById("precioDescuento").value=resultado - (resultado *15) / 100;
+                        }   else {
+                                if (cantidad == 3 && (marca ="FelipeLamparas")) {
+                                    document.getElementById("precioDescuento").value=resultado - (resultado *10) / 100;
+                            }   else {
+                                    if (cantidad == 3) {
+                                        document.getElementById("precioDescuento").value=resultado - (resultado *5) / 100;
+                                }   else {
+                                        document.getElementById("precioDescuento").value=resultado;     
+                                } 
+                            }
+                        }
+                    }             
+                }
+            }
+        }
+    }
+        if (document.getElementById("precioDescuento").value > 120) {
+        document.getElementById("precioDescuento").value=  resultado + iibb;
+        alert("Uste pago "+ iibb + " de Ingresos Brutos"); }
 }

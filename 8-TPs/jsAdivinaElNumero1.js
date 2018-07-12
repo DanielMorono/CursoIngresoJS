@@ -7,8 +7,8 @@ secreto del 1 al 100, en la pantalla del juego
 “Usted es un ganador!!! y en solo X intentos”.
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
-var numeroSecreto; 
-var contadorIntentos;
+var numeroSecreto=Math.floor(Math.random()*(101-1)+1); 
+var contadorIntentos=0;
 
 function comenzar()
 {
@@ -22,5 +22,9 @@ function comenzar()
 function verificar()
 {
 	
-	
+	/*
+Contadores = Una variable + una constante Cont=cont +1;
+Acumuladores = es una variable + una variable
+Banderas = variable booleana
+  */
 }
