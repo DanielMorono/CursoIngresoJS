@@ -19,7 +19,7 @@ function CalcularPrecio ()
     resultado = cantidad * precioLampara;
     cantidad=parseInt(cantidad);
     var iibb = (resultado *10) / 100;
-    var precioDescuento = document.getElementById("precioDescuento").value;
+    Math.floor(document.getElementById("precioDescuento").value);
 
     if (cantidad >= 6) {
         document.getElementById("precioDescuento").value = resultado- (resultado*50)/100;
@@ -37,13 +37,13 @@ function CalcularPrecio ()
                         if (cantidad == 4 && (marca != "FelipeLamparas"|| marca != "ArgentinaLuz")) {
                             document.getElementById("precioDescuento").value = resultado - (resultado * 20) / 100;}
                         else {
-                            if (cantidad == 3 && (marca ="ArgentinaLuz")) {
+                            if (cantidad == 3 && (marca =="ArgentinaLuz")) {
                                 document.getElementById("precioDescuento").value=resultado - (resultado *15) / 100;
                         }   else {
-                                if (cantidad == 3 && (marca ="FelipeLamparas")) {
+                                if (cantidad == 3 && (marca =="FelipeLamparas")) {
                                     document.getElementById("precioDescuento").value=resultado - (resultado *10) / 100;
                             }   else {
-                                    if (cantidad == 3) {
+                                    if (cantidad == 3 && (marca != "ArgentinaLuz" || marca !="FelipeLamparas")) {
                                         document.getElementById("precioDescuento").value=resultado - (resultado *5) / 100;
                                 }   else {
                                         document.getElementById("precioDescuento").value=resultado;     
@@ -56,6 +56,6 @@ function CalcularPrecio ()
         }
     }
         if (document.getElementById("precioDescuento").value > 120) {
-        document.getElementById("precioDescuento").value=  resultado + iibb;
+        document.getElementById("precioDescuento").value= final + iibb;
         alert("Uste pago "+ iibb + " de Ingresos Brutos"); }
 }

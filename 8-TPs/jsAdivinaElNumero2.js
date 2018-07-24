@@ -37,18 +37,19 @@ function verificar()
 		else if (intento == numeroSecreto && (numeroDeIntentos == 3)) {
 			alert ("Esto es suerte");
 		}
-		else if (intento == numeroSecreto && (numeroDeIntentoss == 4)) {
+		else if (intento == numeroSecreto && (numeroDeIntentos == 4)) {
 			alert ("Excelente técnica");
 		}
 		else if (intento == numeroSecreto && (numeroDeIntentos == 5)){
 			alert ("Usted está en la media");
 		}
-		else if (intento == numeroSecreto && [(numeroDeIntentos >= 6) && (numeroDeIntentos <= 10)]) {
+		else if (intento == numeroSecreto && (numeroDeIntentos >= 6 &&numeroDeIntentos <= 10)) {
 			alert ("Falta técnica");
 		}
 		else if(intento == numeroSecreto && (numeroDeIntentos >10)){
 			alert ("Afortunado en el amor!!");
 		}
+		document.getElementById("intentos").value = numeroDeIntentos;
 	
 
 }
