@@ -39,8 +39,8 @@ function mostrar()
 			contadorPares ++
 		}
 		promedioPositivos=suma/contadorPositivos;
-		promedioNegativos=sumaNegativos/contadorNegativo;
-		diferencia = contadorPositivo-contadorNegativo;
+		promedioNegativos=sumaNegativos/contadorNegativos;
+		diferencia = contadorPositivos - contadorNegativos;
 		if (diferencia > 0) {
 			mensaje="Hay mas positivos"
 		} else if (diferencia == 0){
@@ -49,8 +49,6 @@ function mostrar()
 				mensaje= "Hay mas negativos" + (diferencia * -1);
 			}
 		
-
-
 respuesta =prompt("Desea seguir? (si/no)");
 
 	
